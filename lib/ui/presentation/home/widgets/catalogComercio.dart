@@ -1,0 +1,279 @@
+import 'dart:convert';
+import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
+import 'package:location/location.dart';
+import 'package:traknav_app/ui/presentation/home/widgets/aboutPlaces.dart';
+import 'package:traknav_app/ui/presentation/home/widgets/recomended.dart';
+
+class WidgetCatalogComercio extends StatefulWidget {
+  const WidgetCatalogComercio({Key? key}) : super(key: key);
+
+  @override
+  _WidgetCatalogComercioState createState() => _WidgetCatalogComercioState();
+}
+
+class _WidgetCatalogComercioState extends State<WidgetCatalogComercio> {
+  List<StyleModel> catalogItems = [];
+
+  //-----------PARA PODER OBTENER LA POSICIÓN--------------
+  Future<LocationData?> _getLocation() async {
+    final bool hasPermission = await checkPermissions();
+    if (!hasPermission) return null;
+    Location location = Location();
+    return await location.getLocation();
+  }
+
+  //------PARA VERIFICAR SI SE TIENEN PERMISOS PARA ACCEDER A LA LOCALIZACIÓN-------
+  Future<bool> checkPermissions() async {
+    bool serviceEnabled;
+    Location location = Location();
+    PermissionStatus permissionGranted;
+    serviceEnabled = await location.serviceEnabled();
+    if (!serviceEnabled) {
+      serviceEnabled = await location.requestService();
+      if (!serviceEnabled) {
+        return false;
+      }
+    }
+    permissionGranted = await location.hasPermission();
+    if (permissionGranted == PermissionStatus.denied) {
+      permissionGranted = await location.requestPermission();
+      if (permissionGranted != PermissionStatus.granted) {
+        false;
+      }
+    }
+    return true;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getLocation().then((position) {
+      // climaDataF = getClimaForecast(position);
+      fetchData(position);
+    });
+  }
+
+  Future<void> fetchData(LocationData? location) async {
+    // Tu lógica para obtener datos desde la API
+    String url = 'https://places.googleapis.com/v1/places:searchNearby';
+    // Los datos que enviarás en el cuerpo de la solicitud POST
+    print("Hola");
+    print("tamanio: ${catalogItems.length}");
+    // Body de la solicitud
+    Map<String, dynamic> lugares = {
+      "includedTypes": [
+        "vegan_restaurant",
+        "restaurant",
+        "mexican_restaurant",
+        "ice_cream_shop",
+        "coffee_shop",
+      ],
+      "maxResultCount": 20,
+      "locationRestriction": {
+        "circle": {
+          "center": {
+            "latitude": location?.latitude,
+            "longitude": location?.longitude
+          },
+          "radius": 3000.0
+        }
+      }
+    };
+    // Las cabeceras de la solicitud
+    Map<String, String> headers = {
+      'Content-Type': 'application/json',
+      'X-Goog-Api-Key': 'AIzaSyBhlra2MNyBxGTRPayBfv5BomoclZseE8s',
+      // Reemplaza 'API_KEY' con tu clave real
+      'X-Goog-FieldMask':
+          'places.id,places.displayName,places.photos,places.regularOpeningHours,places.shortFormattedAddress,places.editorialSummary',
+    };
+
+    try {
+      var response = await http.post(
+        Uri.parse(url),
+        body: jsonEncode(lugares),
+        headers: headers,
+      );
+      if (response.statusCode == 200) {
+        Map<String, dynamic> jsonData = json.decode(response.body);
+
+        // Iterar sobre los lugares en jsonData
+        for (int i = 0; i < jsonData["places"].length; i++) {
+          // Asegurarse de que haya fotos disponibles
+          if (jsonData["places"][i]["photos"] != null &&
+              jsonData["places"][i]["photos"].isNotEmpty) {
+            // Obtener la referencia de la primera foto (puedes ajustar esto según tus necesidades)
+            String photoReference = jsonData["places"][i]["photos"][0]["name"];
+            String imageUrl = buildImageUrl(photoReference);
+            String name = jsonData["places"][i]["displayName"]["text"];
+            String
+                openingHours; //"Abierto de ${jsonData["places"][i]["regularOpeningHours"]["periods"][0]["open"]["hour"]} a ${jsonData["places"][i]["regularOpeningHours"]["periods"][0]["close"]["hour"]}";
+            if (jsonData["places"][i]["regularOpeningHours"]["periods"][0]
+                        ["open"]["hour"] !=
+                    null &&
+                jsonData["places"][i]["regularOpeningHours"]["periods"][0]
+                        ["close"]["hour"] !=
+                    null) {
+              openingHours =
+                  "Abierto de ${jsonData["places"][i]["regularOpeningHours"]["periods"][0]["open"]["hour"]} a ${jsonData["places"][i]["regularOpeningHours"]["periods"][0]["close"]["hour"]}";
+            } else {
+              openingHours = "No hay horario disponible";
+            }
+            String address = jsonData["places"][i]["shortFormattedAddress"];
+            String editorialSummary;
+            if (jsonData["places"][i]["editorialSummary"] != null &&
+                jsonData["places"][i]["editorialSummary"]["text"] != null) {
+              // Acceder a "text" solo si está presente
+              editorialSummary =
+                  jsonData["places"][i]["editorialSummary"]["text"];
+            } else {
+              // Si "editorialSummary" no está presente, imprime un mensaje de advertencia
+              editorialSummary = "No hay descripción disponible";
+            }
+            //Abierto de ${ place['regularOpeningHours']['periods'][0]['open']['time']} a ${ place['regularOpeningHours']['periods'][0]['close']['time']}"; // Nueva línea
+            //print("Nombre: $name");
+            //print("Hora de apertura: $openingHours");
+            setState(() {
+              catalogItems.add(
+                StyleModel(
+                  id: (catalogItems.length + 1)
+                      .toString(), // Generar un nuevo ID único
+                  url: imageUrl,
+                  name: name,
+                  description: editorialSummary,
+                  direction: address,
+                  schedule: openingHours,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(168, 131, 131, 131),
+                      blurRadius: 8.0,
+                      spreadRadius: 1.0,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
+              );
+              //imprimimos el tamaño de la lista
+              print("tamanio: ${catalogItems.length}");
+            });
+          }
+        }
+      } else {
+        print('Error en la solicitud: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  String buildImageUrl(String photoReference) {
+    const String apiKey = 'AIzaSyBhlra2MNyBxGTRPayBfv5BomoclZseE8s';
+    return 'https://places.googleapis.com/v1/$photoReference/media?maxHeightPx=400&maxWidthPx=400&key=$apiKey';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          AppLocalizations.of(context)!.homeCategoriesComercioLocal,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 2.0,
+            mainAxisSpacing: 18.0,
+          ),
+          itemCount: catalogItems.length,
+          itemBuilder: (context, index) {
+            return CatalogItemWidget(catalogItem: catalogItems[index]);
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class CatalogItemWidget extends StatelessWidget {
+  final StyleModel catalogItem;
+
+  const CatalogItemWidget({required this.catalogItem});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        _navigateToDetailPage(context, catalogItem);
+      },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(28.0),
+        child: Card(
+          child: Stack(
+            children: [
+              Image.network(
+                catalogItem.url,
+                width: double.infinity,
+                height: 200.0, // Ajusta la altura según tus necesidades
+                fit: BoxFit.cover,
+              ),
+              Container(
+                width: double.infinity,
+                height: 200.0, // Ajusta la altura según tus necesidades
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(7.0),
+                ),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 0, sigmaY: 2),
+                  child: Container(
+                    color: Color.fromARGB(68, 0, 0, 0),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 10.0,
+                bottom: 30,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    catalogItem.name,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _navigateToDetailPage(BuildContext context, StyleModel catalogItem) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AboutPlaces(
+          item: catalogItem,
+          imageUrl: catalogItem.url,
+          // Agrega valores adicionales según sea necesario
+        ),
+      ),
+    );
+  }
+}

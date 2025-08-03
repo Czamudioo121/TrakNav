@@ -1,0 +1,775 @@
+{
+    "language": "Español",
+    "@language": {
+        "description": "Lenguaje por default"
+    },
+"hOMETEXTS": "HOMETEXTS",
+    "homeSidemenuTitle": "Menú",
+    "@homeSidemenuTitle": {
+        "description": "El titulo del menú de hamburguesa"
+    },
+    "homeScaffold": "TrakNav",
+    "@homeScaffold": {
+        "description": "El titulo del scaffold del home"
+    },
+    "homeSidemenuHome": "Inicio",
+    "@homeSidemenuHome": {
+        "description": "La opción de ir a pantalla inicial en el menú de hamburguesa"
+    },
+    "homeSidemenuMap": "Mapa",
+    "@homeSidemenuMap": {
+        "description": "La opción de ir al mapa en el menú de hamburguesa"
+    },
+    "homeSidemenuProfile": "Mi cuenta",
+    "@homeSidemenuProfile": {
+        "description": "La opción de ir a mi cuenta en el menú de hamburguesa"
+    },
+    "homeSidemenuFavs": "Mis Favoritos",
+    "@homeSidemenuFavs": {
+        "description": "La opción de ir a mis favoritos en el menú de hamburguesa"
+    },
+    "homeSidemenuPlan": "Plan de viaje",
+    "@homeSidemenuPlan": {
+        "description": "La opción de ir a Plan de viaje en el menú de hamburguesa"
+    },
+    "homeSidemenuWeather": "Clima",
+    "@homeSidemenuWeather": {
+        "description": "La opción de ir a Clima en el menú de hamburguesa"
+    },
+    "homeSidemenuCustom": "Personalización",
+    "@homeSidemenuCustom": {
+        "description": "El subtitulo de la sección personalización el menú de hamburguesa"
+    },
+    "homeSidemenuRecommendations": "Modificar recomendaciones",
+    "@homeSidemenuRecommendations": {
+        "description": "La opción de modificar recomendaciones en el menú de hamburguesa"
+    },
+    "homeSidemenuLang": "Modificar idioma",
+    "@homeSidemenuLang": {
+        "description": "La opción de modificar idioma en el menú de hamburguesa"
+    },
+    "homeSidemenuLangEs": "Español",
+    "@homeSidemenuLangEs": {
+        "description": "La opción de modificar idioma a español en el menú de hamburguesa"
+    },
+    "homeSidemenuLangEn": "Inglés",
+    "@homeSidemenuLangEn": {
+        "description": "La opción de modificar idioma a inglés en el menú de hamburguesa"
+    },
+    "homeSidemenuTheme": "Modo {theme_value}",
+    "@homeSidemenuTheme": {
+        "description": "La opción de modificar el tema el menú de hamburguesa",
+        "placeholders": {
+            "theme_value": {
+              "type": "String"
+            }
+        }
+    },
+    "homeSidemenuSupport": "Ayuda y soporte",
+    "@homeSidemenuSupport": {
+        "description": "El subtitulo de soporte técnico en el menú de hamburguesa"
+    },
+    "homeSidemenuQuestions": "Preguntas frecuentes",
+    "@homeSidemenuQuestions": {
+        "description": "La opción de preguntas frecuentes en el menú de hamburguesa"
+    },
+    "homeSidemenuGuide": "Manual de usuario",
+    "@homeSidemenuGuide": {
+        "description": "La opción de manual de usuario en el menú de hamburguesa"
+    },
+    "homeSidemenuAboutUs": "Acerca de",
+    "@homeSidemenuAboutUs": {
+        "description": "La opción de acerca de en el menú de hamburguesa"
+    },
+    "homeSidemenuSignOut": "Cerrar sesión",
+    "@homeSidemenuSignOut": {
+        "description": "La opción de cerrar sesión en el menú de hamburguesa"
+    },
+    "homeSearchBar": "Hola, ¿A dónde vamos?",
+    "@homeSearchBar": {
+        "description": "Texto mostrado en la barra de busqueda"
+    },
+    "homeAdviceUp": "Encuentra más lugares",
+    "@homeAdviceUp": {
+        "description": "Texto mostrado en el advice arriba"
+    },
+   "homeAdviceDown": "a tu alrededor",
+    "@homeAdviceDown": {
+        "description": "Texto mostrado en el advice abajo"
+    },
+    "homeAdviceDiscover": "Descubrir ahora >",
+    "@homeAdviceDiscover": {
+        "description": "Texto mostrado en el advice para descubrir"
+    },
+    "homeRecomendedMore": "Ver más",
+    "@homeRecomendedMore": {
+        "description": "Texto ver más"
+    },
+    "homeRecomendedTitle": "Recomendados",
+    "@homeRecomendedTitle": {
+        "description": "Texto Recomendados"
+    },
+    "homeNearlyTitle": "Cercanos a mi",
+    "@homeNearlyTitle": {
+        "description": "Texto Cercanos"
+    },
+    "homeCategoriesTitle": "Categorias",
+    "@homeCategoriesTitle": {
+        "description": "Texto Categorias"
+    },
+     "homeCategoriesComercioLocal": "Comercio Local",
+    "@homeCategoriesComercioLocal": {
+        "description": "Texto de lista Comercio Local"
+    },
+    "homeCategoriesMuseos":"Museos",
+    "@homeCategoriesMuseos":{
+        "description":"Texto de lista museos"
+    },
+    "homeCategoriesHospedaje":"Hospedaje",
+    "@homeCategoriesHospedaje":{
+        "description":"Texto de lista hospedaje"
+    },
+    "homeCategoriesParques":"Parques",
+    "@homeCategoriesParques":{
+        "description":"Texto de lista de Parques"
+    },
+    "homeCategoriesRestaurantes":"Restaurantes",
+    "@homeCategoriesRestaurantes":{
+        "description":"Texto de lista Restaurantes"
+    },
+    "homeCategoriesPersonalizadas":"Personalizadas",
+    "@homeCategoriesPersonalizadas":{
+        "description":"Texto de lista Personalizadas"
+    },
+     "homeCategoriesTiempo":"Tiempo",
+    "@homeCategoriesTiempo":{
+        "description":"Texto de lista Tiempo"
+    },
+     "homeCategoriesPlanViaje":"Plan Viaje",
+    "@homeCategoriesPlanViaje":{
+        "description":"Texto de lista PlanViaje"
+    },
+    "homeCategoriesFavoritos":"Favoritos",
+    "@homeCategoriesFavoritos":{
+        "description":"Texto de lista Favoritos"
+    },
+    "homeCategoriesHerramientas":"Herramientas",
+    "@homeCategoriesHerramientas":{
+        "description":"titulo Herramientas"
+    },
+"aCERCADETEXTS": "aCERCADETEXTS",
+"acercaDerechos": "TRAKNAV. Todos los derechos reservados.",
+    "@acercaDerechos": {
+        "description": "Texto de derechos"
+    },
+
+"sIGNINTEXTS": "sIGNINTEXTS",
+    "signinWelcome": "Bienvenido a ",
+    "@signinWelcome": {
+        "description": "El titulo de formulario de registro e inicio"
+    },
+    "signinAppTitle": "TRAKNAV",
+    "@signinAppTitle": {
+        "description": "Titulo de la app en el formulario de registro e inicio"
+    },
+    "signinTapTitle": "Iniciar Sesión",
+    "@signinAppTitle": {
+        "description": "Titulo de la opción iniciar sesión en el formulario de registro e inicio"
+    },
+    "signupTapTitle": "Registrarse",
+    "@signupTapTitle": {
+        "description": "Titulo de la opción registrarse en el formulario de registro e inicio"
+    },
+    "signinForgotPass": "¿Olvidaste tu contraseña?",
+    "@signinForgotPass": {
+        "description": "Titulo botón olvidar contraseña en el formulario de registro e inicio"
+    },
+    "formEmail": "Correo Electrónico",
+    "@formEmail": {
+        "description": "Pista de introducir correo en el formulario de inicio sesión y registro"
+    },
+    "formPassword": "Contraseña",
+    "@formPassword": {
+        "description": "Pista de introducir contraseña en el formulario de inicio sesión y registro"
+    },
+    "formName": "Nombre",
+    "@formName": {
+        "description": "Pista de introducir nombre en el formulario de inicio sesión y registro"
+    },
+    "formPhone": "Teléfono",
+    "@formPhone": {
+        "description": "Pista de introducir teléfono en el formulario de inicio sesión y registro"
+    },
+    "formSecureQuestion1": "¿A que primaria fuiste?",
+    "@formSecureQuestion1": {
+        "description": "Pista de introducir pregunta seguridad 1 en el formulario de inicio sesión y registro"
+    },
+    "formSecureQuestion2": "¿En qué ciudad vives?",
+    "@formSecureQuestion2": {
+        "description": "Pista de introducir pregunta seguridad 2 en el formulario de inicio sesión y registro"
+    },
+    "changeLanguageTitle": "SELECCIONA TU IDIOMA",
+    "@changeLanguageTitle": {
+        "description": "Título de la sección cambiar idioma en pantalla inicio sesión"
+    },
+    "formCity": "Ciudad de orígen",
+    "@formCity": {
+        "description": "Campo de ciudad en el formulario de registro"
+    },
+    "errorRequired": "Este campo es obligatorio",
+    "@errorRequired": {
+        "description": "Error a mostrar cuando un campo requerido no se llenó"
+    },
+    "errorEmail": "Introduce un correo elecrónico válido\n nombre@ejemplo.com",
+    "@errorEmail": {
+        "description": "Error a mostrar cuando el campo email está mal"
+    },
+    "errorPhone": "Introduce un número de teléfono válido (10 dígitos)",
+    "@errorPhone": {
+        "description": "Error a mostrar cuando el campo teléfono está mal"
+    },
+    "errorPassword": "La contraseña debe tener al menos:\n- Una letra minúscula.\n- Una letra mayúscula.\n- Un número \n- Ser de al menos 8 caracteres de longitud.",
+    "@errorPassword": {
+        "description": "Error a mostrar cuando el campo contraseña es muy debil"
+    },
+    "failedSignIn": "No pudimos iniciar sesión. Revisa tu contraseña e intenta de nuevo",
+    "@errorPassword": {
+        "description": "Error al intentar iniciar sesión con firebase"
+    },
+    "failedSignUp": "No crear tu cuenta. Intenta de nuevo",
+    "@errorPassword": {
+        "description": "Error al registrar usuario con firebase"
+    },
+"rECOMMENDATIONSTEXTS": "rECOMMENDATIONSTEXTS",
+    "recPopular": "Sitios populares",
+    "@recPopular": {
+        "description": "Opción de sitios populares en recomendaciones"
+    },
+    "recMuseum": "Museos",
+    "@recMuseum": {
+        "description": "Opción de museos en recomendaciones"
+    },
+    "recRestaurants": "Restaurantes",
+    "@recRestaurants": {
+        "description": "Opción de restaurantes en recomendaciones"
+    },
+    "recLocalCommerce": "Comercio local",
+    "@recLocalCommerce": {
+        "description": "Opción de comercio local en recomendaciones"
+    },
+    "recHistorical": "Patrimonio histórico",
+    "@recHistorical": {
+        "description": "Opción de Patrimonio histórico en recomendaciones"
+    },
+    "recLodgment": "Hospedaje",
+    "@recLodgment": {
+        "description": "Opción de hospedaje en recomendaciones"
+    },
+    "recParks": "Parques",
+    "@recParks": {
+        "description": "Opción de parques en recomendaciones"
+    },
+    "recGuided": "Visitas guiadas",
+    "@recGuided": {
+        "description": "Opción de visitas guiadas en recomendaciones"
+    },
+    "recHello": "¡Hola!",
+    "@recHello": {
+        "description": "Título de la pantalla de recomendaciones"
+    },
+    "recDescription": "Para personalizar tus recomendaciones de manera óptima, ¡cuéntanos un poco sobre tus gustos e intereses en viajes!",
+    "@recDescription": {
+        "description": "Indicaciones para el usuario"
+    },
+    "recSelected": "seleccionados",
+    "@recSelected": {
+        "description": "contador de preferencias seleccionadas"
+    },
+    "recNextButton": "Siguiente",
+    "@recNextButton": {
+        "description": "boton siguiente"
+    },
+    "recSkipButton": "Omitir",
+    "@recNextButton": {
+        "description": "boton Omitir"
+    },
+"tRIPPLANTEXTS": "tRIPPLANTEXTS",
+        "tripplanappbar": "Plan de viaje",
+        "@tripplanappbar": {
+            "description": "Appbar para Plan de Viaje"
+        },
+    
+        "tripPlanMaintext": "El plan de viaje te permite seleccionar todos los lugares de interes, posteriormente te permitira trazar una ruta para visitarlos.",
+        "@tripPlanMaintext": { 
+            "description": "Texto Plan de Viaje"
+        },
+        "tripplanday" : "Día",
+        "@tripplanday": {
+        "description": "Día N"
+        },
+        "edittripplan" : "Editar plan de viaje",
+        "@edittripplan": {
+        "description": "Botón Editar plan de la pantalla Crear plan"
+        },
+        "createtripplan" : "Crear plan de viaje",
+        "@createtripplan": {
+        "description": "Botón Crear plan de la pantalla Crear plan"
+        },
+        "tripplanlist" : "Mis planes de viaje",
+        "@tripplanlist": {
+        "description": "Lista de los planes de viaje"
+        },
+        "tripplanlistf" : "Completado",
+        "@tripplanlistf": {
+        "description": "Lista de los planes de viaje-completado"
+        },
+        "tripplanlistu" : "Pendiente",
+        "@tripplanlistu": {
+        "description": "Lista de los planes de viaje-pendiente"
+        },
+        "endTripPlan" : "Terminar plan de viaje",
+        "@endTripPlan": {
+        "description": "Terminar plan de viaje"
+        },
+        "tripplantext1" : "Planifica tu viaje de manera fácil y eficiente.",
+        "@tripplantext1": {
+        "description": "Primer texto de crear plan de viaje"
+        },
+        "tripplantext2" : "Ingresa la duración de tu estadía e inicia tu aventura.",
+        "@tripplantext2": {
+        "description": "Segundo texto de crear plan de viaje"
+        },
+        "tripplannumberdays" : "Número de Días",
+        "@tripplannumberdays": {
+        "description": "Número de Días plan de viaje"
+        },
+        "tripplancreatebutton" : "Planificar Viaje",
+        "@tripplancreatebutton": {
+        "description": "boton de confirmacion"
+        },
+
+        "myTripPlans1" : "Nombre del plan",
+        "@myTripPlans1": {
+        "description": "Input 1"
+        },
+        "myTripPlans15" : "Nombre del plan",
+        "@myTripPlans15": {
+        "description": "Input 1.5"
+        },
+        
+        "myTripPlans2" : "Número de Días",
+        "@myTripPlans2": {
+        "description": "Input 2"
+        },
+        "myTripPlans25" : "Número de Días",
+        "@myTripPlans25": {
+        "description": "Input 2.5"
+        },
+
+        "myTripPlans3" : "Fecha de inicio",
+        "@myTripPlans3": {
+        "description": "Input 3"
+        },
+        "myTripPlans35" : "Fecha de inicio",
+        "@myTripPlans35": {
+        "description": "Input 3.5"
+        },
+        "error1tripplan" : "El campo es requerido",
+        "@error1tripplan": {
+        "description": "completar campo"
+        },
+
+        "error2tripplan" : "Debe ser un número válido de días",
+        "@error2tripplan": {
+        "description": "error dias1"
+        },
+
+        "error3tripplan" : "Solo se pueden máximo 21 días",
+        "@error3tripplan": {
+        "description": "error dias2"
+        },
+        "error4tripplan" : "Mínimo 1 día",
+        "@error4tripplan": {
+        "description": "error dias3"
+        },
+        "error5tripplan" : "No puedes usar una fecha anterior a la actual",
+        "@error5tripplan": {
+        "description": "error dias4"
+        },
+
+        "error6tripplan" : "Tu plan de viaje debe tener al menos 1 día",
+        "@error6tripplan": {
+        "description": "error dias6"
+        },
+        "error7tripplan" : "Tu plan de viaje puede tener un máximo de 21 días",
+        "@error7tripplan": {
+        "description": "error dias7"
+        },
+         "error8tripplan" : "Solo puede haber máximo 8 lugares por día. Agrega este lugar a otro día",
+        "@error8tripplan": {
+        "description": "error dias8"
+        },
+        "error9tripplan" : "Todos los días de tu plan deben tener lugares asignados",
+        "@error9tripplan": {
+        "description": "error dias9"
+        },
+        "error10tripplan" : "No pudimos crear tu plan de viaje. Intenta de nuevo",
+        "@error10tripplan": {
+        "description": "error dias10"
+        },
+        "search2" : "Buscar Lugar",
+        "@search2": {
+        "description": "busqueda"
+        },
+        "search3" : "Escribe el nombre del lugar...",
+        "@search3": {
+        "description": "busqueda"
+        },
+
+        "agregar1" : "Agregar Lugar",
+        "@agregar1": {
+        "description": "agregar"
+        },
+        "agregar2" : "Agregar",
+        "@agregar2": {
+        "description": "agregar2"
+        },
+        "agregar3" : "Agregar día",
+        "@agregar3": {
+        "description": "agregar3"
+        },
+        "imageerror1" : "Error al cargar la imagen",
+        "@imageerror1": {
+        "description": "Error de imagen"
+        },
+        "imageerror2" : "No se pudo cargar la imagen",
+        "@imageerror2": {
+        "description": "Error de imagen2"
+        },
+
+        "borrardia" : "Eliminar día",
+        "@borrardia": {
+        "description": "Eliminar día"
+        },
+        "mensajehist1" : "Aún no tienes planes de viaje completados",
+        "@mensajehist1": {
+        "description": "mensaje historial"
+        },
+        "mensajehist2" : "Asegurate de marcarlos como 'completado' en la página 'Mis planes de viaje'",
+        "@mensajehist2": {
+        "description": "mensaje historial2"
+        },
+        "mensajelist1" : "Aún no tienes planes de viaje",
+        "@mensajelist1": {
+        "description": "mensaje lista"
+        },
+        "mensajelist2" : "Puedes crear uno en la página 'Crear plan de viaje'",
+        "@mensajelist2": {
+        "description": "mensaje lista2"
+        },
+        "tripplanlists" : "Iniciar plan de viaje",
+        "@tripplanlists": {
+        "description": "Lista de los planes de viaje-pendiente"
+        },
+        "tripplanhistory" : "Historial",
+        "@tripplanhistory": {
+        "description": "Historial"
+        },
+        "createPlanDialogTitle": "Crear plan de viaje",
+        "@createPlanDialogTitle": {
+        "description": "cuadro de diálogo al crear el plan de viaje"
+        },
+        "warningSelectCity": "Por favor selecciona una ciudad",
+        "@warningSelectCity": {
+        "description": "Toastapp de seleccionar ciudad o no continuar"
+        },
+        "explorePlansButton": "Explorar planes",
+        "@explorePlansButton": {
+        "description": "Toastapp de seleccionar ciudad o no continuar"
+        },
+        "failedFetchPlans": "No pudimos obtener tus planes de viaje. Intenta de nuevo",
+        "@failedFetchPlans": {
+        "description": "fallo al obtener planes de viaje"
+        },
+        "searchPlans": "Buscar",
+        "@searchPlans": {
+        "description": "botón buscar planes populares"
+        },
+        "copyPlan": "Copiar plan",
+        "@copyPlan": {
+        "description": "botón copiar plan"
+        },
+        "createPlanDialogMessage": "Podrás editarlo en la sección ''Mis planes de viaje''",
+        "@createPlanDialogMessage": {
+        "description": "contenido del cuadro"
+        },
+        "cancel": "Cancelar",
+        "@cancel": {
+        "description": "Cancelar"
+        },
+        "confirm": "Aceptar",
+        "@confirm": {
+        "description": "Aceptar"
+        },
+"fAQSTEXTS": "fAQSTEXTS",
+    "navBarTitle": "PREGUNTAS FRECUENTES",
+    "@navBarTitle": {
+        "description": "Título de la barra de navegación"
+    },
+    "mainBtnTitle": "PREGUNTAS GENERALES",
+    "@mainBtnTitle": {
+        "description": "Título de botón principal"
+    },
+    "mainBtnText": "Resuelve tus dudas con esta recopilación de preguntas más frecuentes",
+    "@mainBtnText": {
+        "description": "Texto del botón principal"
+    },
+    "contactUs": "CONTÁCTANOS",
+    "@contactUs": {
+        "description": "Título para información de contacto"
+    },
+    "questionsAbout": "PREGUNTAS ACERCA DE:",
+    "@questionsAbout": {
+        "description": "Título para el action area de la pagina acerca de"
+    },
+    "usrProfile": "Perfil de Usuario",
+    "@usrProfile": {
+        "description": "botón perfil de usuario"
+    },
+    "generalInfo": "Información General",
+    "@generalInfo": {
+        "description": "botón de información general"
+    },
+    "tecProblems": "Problemas Técnicos",
+    "@tecProblems": {
+        "description": "botón de problemas técnicos"
+    },
+    "privPolicies": "Políticas de Privacidad",
+    "@privPolicies": {
+        "description": "botón de políticas"
+    },
+    "hwEditProfile": "¿Cómo editar mi perfil de usuario?",
+    "@hwEditProfile": {
+        "description": "pregunta de perfil de usuario sobre editar el perfil"
+    },
+    "hwEditProfileAns": "Puedes editar tu perfil de usuario accediendo a los detalles de tu cuenta a través del ícono redondo de la ezquina superior derecha de la pantalla principal. Una vez en los detalles de tu cuenta solo tienes que hacer tap en 'editar'",
+    "@hwEditProfileAns": {
+        "description": "Respuesta de perfil de usuario sobre editar el perfil"
+    },
+    "hwResetPass": "¿Cómo reestablezco mi contraseña?",
+    "@hwResetPass": {
+        "description": "Pregunta de perfil de usuario sobre reestabecer contraseña"
+    },
+    "hwResetPassAns": "Reestablecer contraseña es una de las modificaciones que puedes hacer al editar tu perfil, por lo que tienes que acceder a editar perfil",
+    "@hwResetPassAns": {
+        "description": "Pregunta de perfil de usuario sobre reestabecer contraseña"
+    },
+    "plansAndTrips": "¿Mis planes de viaje son públicos?",
+    "@plansAndTrips": {
+        "description": "Pregunta de perfil de usuario sobre si planes de viaje son públicos"
+    },
+    "plansAndTripsAns": "No, tus planes y viajes son privados y se almacenan en tu cuenta de usuario. Los planes se pueden compartir por redes sociales, pero no es obligatorio hacerlo",
+    "@plansAndTripsAns": {
+        "description": "Pregunta de perfil de usuario sobre si planes de viaje son públicos"
+    },
+    "hwCustomAcc": "¿Cómo personalizar mi cuenta?",
+    "@hwCustomAcc": {
+        "description": "Pregunta de perfil de usuario sobre la personalización de la cuenta"
+    },
+    "hwCustomAccAns": "Si no configuraste tus preferencias a la hora de crear tu cuenta o deseas cambiarlas, solo tienes que acceder al apartado de 'modificar recomendaciones' del menú de hamburguesa",
+    "@hwCustomAccAns": {
+        "description": "Pregunta de perfil de usuario sobre la personalización de la cuenta"
+    },
+    "gnralInfo1": "Sobre la personalización de mi cuenta",
+    "@gnralInfo1": {
+        "description": "Primera pregunta sobre información general"
+    },
+    "gnralInfoAns1": "Puedes personalizar tu cuenta a través de la configuración de tus preferencias a la hora de crearla, o bien, haciendo tap en la opción 'modificar recomendaciones' ubicada en el menú de hambrguesa",
+    "@gnralInfoAns1": {
+        "description": "Respuesta a la primera pregunta sobre información general"
+    },
+    "gnralInfo2": "Sobre las funcionalidades más importantes de la aplicación",
+    "@gnralInfo2": {
+        "description": "Segunda pregunta sobre información general"
+    },
+    "gnralInfoAns2": "Algunas de las funcionalidades más destacadas de TrakNav son: crear y editar planes de viaje, guardar planes de viaje, visualizar clima actual y su pronóstico en los 5 días siguientes, modificar el idioma, ¡y muchas más!",
+    "@gnralInfoAns2": {
+        "description": "Respuesta a la segunda pregunta sobre información general"
+    },
+    "gnralInfo3": "Acerca de los planes de viaje",
+    "@gnralInfo3": {
+        "description": "Tercera pregunta sobre información general"
+    },
+    "gnralInfoAns3": "Los usuarios de TrakNav pueden crear planes de viaje y modificarlos, estos planes pueden ser de hasta 3 días. Una vez concluido el plan, este se guarda para que el usuario pueda recordar a los lugares que fue y el orden en que lo hizo. Además, se puede compartir el plan de viaje por redes sociales",
+    "@gnralInfoAns3": {
+        "description": "Respuesta a la tercera pregunta sobre información general"
+    },
+    "gnralInfo4": "Sobre el manual de usuario",
+    "@gnralInfo4": {
+        "description": "Cuarta pregunta sobre información general"
+    },
+    "gnralInfoAns4": "El manual de usuario es una guía para que el usuario conozca a detalle todas las funcionalidades disponibles en el sistema. Este manual se encuentra en las últimas opciones del menú de hamburguesa",
+    "@gnralInfoAns4": {
+        "description": "Respuesta a la cuarta pregunta sobre información general"
+    },
+    "technicalProb1": "No puedo visualizar el clima",
+    "@technicalProb1": {
+        "description": "Primera pregunta sobre problemas técnicos"
+    },
+    "technicalProbAns1": "Asegurate de tener conexión a internet. Si no puedes visualizar el clima en la ubicación deseada, prueba moviendo la ubicación a una zona cercana",
+    "@technicalProbAns1": {
+        "description": "Respuesta a la primera pregunta sobre problemas técnicos"
+    },
+    "technicalProb2": "El mapa no carga",
+    "@technicalProb2": {
+        "description": "Segunda pregunta sobre problemas técnicos"
+    },
+    "technicalProbAns2": "Verifica tu conexión a internet. Si aún así no puede cargar el mapa, intenta esperar y después vuélvelo a intentar, seguramente haya problemas con la conexión al servicio de Google",
+    "@technicalProbAns2": {
+        "description": "Respuesta a la segunda pregunta sobre problemas técnicos"
+    },
+    "technicalProb3": "Mi plan de viaje no se guarda",
+    "@technicalProb3": {
+        "description": "Tercera pregunta sobre problemas técnicos"
+    },
+    "technicalProbAns3": "Asegurate de tener conexión a internet a la hora de gardar el plan de viaje",
+    "@technicalProbAns3": {
+        "description": "Respuesta a la tercera pregunta sobre problemas técnicos"
+    },
+    "privPolicies1": "¿Cómo protege nuestra aplicación la privacidad de los usuarios?",
+    "@privPolicies1": {
+        "description": "Primera pregunta sobre políticas de privacidad"
+    },
+    "privPoliciesAns1": "A través del control de acceso mediante cuentas privadas pertenecientes al usuario en cuestión. Es responsabilidad del usuario el compartir su contraseña para acceder a la aplicación",
+    "@privPoliciesAns1": {
+        "description": "Respuesta a la primera pregunta sobre políticas de privacidad"
+    },
+    "privPolicies2": "¿Qué tipo de información se recopila?",
+    "@privPolicies2": {
+        "description": "Segunda pregunta sobre políticas de privacidad"
+    },
+    "privPoliciesAns2": "Solamente recopilamos la información proporcionada a la hora de crear la cuenta, y es para adaptar una experiencia de usuario más personalizada. Como parte de una funcionalidad del sistema, también se guardan los planes de viaje",
+    "@privPoliciesAns2": {
+        "description": "Respuesta a la segunda pregunta sobre políticas de privacidad"
+    },
+    "privPolicies3": "¿Se comparte la información recopilada a terceros?",
+    "@privPolicies3": {
+        "description": "Tercera pregunta sobre políticas de privacidad"
+    },
+    "privPoliciesAns3": "No",
+    "@privPoliciesAns3": {
+        "description": "Respuesta a la tercera pregunta sobre políticas de privacidad"
+    },
+"mAPTEXTS": "MAPTEXTS",
+    "goToPlaceButton": "Ir a",
+    "@goToPlaceButton": {
+        "description": "Botón de mostrar direcciones para una locación"
+    },
+    "placeDetailsButton": "Detalles",
+    "@goToPlaceButton": {
+        "description": "Botón de mostrar detalles para una locación"
+    },
+"uSERTEXTS": "USERTEXTS",
+    "miCuenta": "Mi Cuenta",
+    "@miCuenta": {
+        "description": "Título del AppBar"
+    },
+    "editBtn": "Editar",
+    "@editBtn": {
+        "description": "Botón de editar información del perfil de usuario"
+    },
+    "correoTxtField": "Correo:",
+    "@correoTxtField": {
+        "description": "Campo de texto de correo"
+    },
+    "ciudadTxtField": "Ciudad:",
+    "@ciudadTxtField": {
+        "description": "Campo de texto de ciudad"
+    },
+    "telTxtField": "Teléfono:",
+    "@telTxtField": {
+        "description": "Campo de texto de teléfono"
+    },
+    "nameTxtField": "Nombre",
+    "@nameTxtField": {
+        "description": "Label del campo de texto nombre para editarlo"
+    },
+    "nameTxtFieldErr": "El nombre no debe contener dígitos ni caracteres especiales",
+    "@nameTxtFieldErr": {
+        "description": "se introduce un nombre incorrecto"
+    },
+    "ciudadTxtFieldErr": "ninguna ciudad contiene esos caracteres especiales",
+    "@ciudadTxtFieldErr": {
+        "description": "se introduce una ciudad incorrecta"
+    },
+    "telTxtFieldErr": "Ingrese un número válido. Puede ingresar la Lada de manera opcional colocando un + y hasta 3 dígitos. Si ingresó la Lada, debe haber un espacio, luego coloque el número (de 8 a 10 dígitos)",
+    "@telTxtFieldErr": {
+        "description": "se introduce un formato de correo incorrecto"
+    },
+    "succMsg": "Información actualizada exitosamente",
+    "@succMsg": {
+        "description": "Mensaje que se muetsra al actualizar la información de forma exitosa"
+    },
+    "saveBtn": "Guardar",
+    "@saveBtn": {
+        "description": "Botón pa guardar cambios"
+    },
+"wEATHERTEXTS": "WEATHERTEXTS",
+    "weatherTitle": "Clima",
+    "@weatherTitle": {
+        "description": "Título de clima en el app bar"
+    },
+    "sunny": "Soleado",
+    "@sunny": {
+        "description": "Si está soleado"
+    },
+    "cloudy": "Nublado",
+    "@cloudy": {
+        "description": "Si está nublado"
+    },
+    "rainChance": "% de probabilidad de lluvia",
+    "@rainChance": {
+        "description": "Texto de probabilidad de lluvia"
+    },
+    "weekTitle": "Semana",
+    "@weekTitle": {
+        "description": "Texto"
+    },
+    "temperaturaDia": "Temperatura",
+    "@temperaturaDia": {
+        "description": "Texto"
+    },
+    "chanceRainDia": "Prob. lluvia:",
+    "@chanceRainDiaDia": {
+        "description": "Texto"
+    },
+"fAVOURITESTEXTS": "FAVOURITESTEXTS",
+    "myFavorites": "Mis favoritos",
+    "@myFavorites": {
+        "description": " "
+    },
+    "deleteSite": "Eliminar sitio",
+    "@deleteSite": {
+        "description": " "
+    },
+    "unknown": "Desconocido",
+    "@unknown": {
+        "description": " "
+    },
+    "opened": "Abierto",
+    "@opened": {
+        "description": " "
+    },
+    "closed": "Cerrado",
+    "@closed": {
+        "description": " "
+    },
+    "shareButton": "Compartir",
+    "@shareButton": {
+        "description": " "
+    },
+    "copiedToClipboard": "Enlace copiado al portapapeles.",
+    "@copiedToClipboard": {
+        "description": " "
+    }
+}
