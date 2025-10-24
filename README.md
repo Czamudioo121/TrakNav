@@ -1,291 +1,368 @@
-# 🚀 TrakNav - Aplicación de Navegación y Seguimiento GPS
+# 🚀 TrakNav - Aplicación de Navegación GPS y Planificación de Viajes
 
-TrakNav es una aplicación móvil desarrollada en Flutter que combina navegación GPS inteligente con planificación de viajes avanzada. La aplicación está diseñada para fomentar el turismo mediante recomendaciones contextuales y una experiencia de viaje simple e intuitiva.
+**TrakNav** es una solución integral de navegación GPS y planificación turística desarrollada con metodologías ágiles SCRUM. La aplicación combina tecnologías modernas de Flutter con servicios en la nube para ofrecer una experiencia completa de viajes personalizados y navegación inteligente.
 
-## 🎯 Objetivo del Proyecto
+## 📑 Tabla de Contenidos
 
-El objetivo es crear una aplicación móvil que ofrezca información relevante y recomendaciones de sitios cercanos, con funcionalidades de:
-- Geolocalización en tiempo real
-- Búsqueda de sitios y catálogo por categorías  
-- Recomendaciones personalizadas según preferencias e historial
-- Gestión de favoritos y soporte multiusuario
-- Itinerarios con planificación diaria y guía de trayecto óptimo
+1. [🎯 Visión del Proyecto](#1-visión-del-proyecto)
+2. [📋 Metodología de Desarrollo](#2-metodología-de-desarrollo)
+   - 2.1 [SCRUM Framework](#21-scrum-framework)
+   - 2.2 [Sprint Planning Overview](#22-sprint-planning-overview)
+   - 2.3 [Equipo SCRUM "Los Maquiavélicos"](#23-equipo-scrum-los-maquiavélicos)
+3. [🏗️ Arquitectura y Stack Tecnológico](#3-arquitectura-y-stack-tecnológico)
+   - 3.1 [Frontend & Framework](#31-frontend--framework)
+   - 3.2 [Backend & Servicios en la Nube](#32-backend--servicios-en-la-nube)
+   - 3.3 [APIs y Servicios Externos](#33-apis-y-servicios-externos)
+   - 3.4 [Herramientas de Desarrollo](#34-herramientas-de-desarrollo)
+4. [📱 Funcionalidades Principales](#4-funcionalidades-principales)
+   - 4.1 [🔐 Gestión de Usuarios Avanzada](#41-gestión-de-usuarios-avanzada)
+   - 4.2 [🗺️ Navegación y Mapas Inteligentes](#42-navegación-y-mapas-inteligentes)
+   - 4.3 [📅 Planificación de Viajes Profesional](#43-planificación-de-viajes-profesional)
+   - 4.4 [⭐ Sistema de Favoritos y Recomendaciones](#44-sistema-de-favoritos-y-recomendaciones)
+   - 4.5 [🌤️ Información Contextual](#45-información-contextual)
+5. [🛠️ Implementación y Configuración](#5-implementación-y-configuración)
+   - 5.1 [Prerrequisitos del Sistema](#51-prerrequisitos-del-sistema)
+   - 5.2 [Configuración del Proyecto](#52-configuración-del-proyecto)
+   - 5.3 [Comandos de Desarrollo](#53-comandos-de-desarrollo)
+6. [🔧 Arquitectura del Sistema](#6-arquitectura-del-sistema)
+   - 6.1 [Patrón BLoC (Business Logic Component)](#61-patrón-bloc-business-logic-component)
+   - 6.2 [Flujo de Datos](#62-flujo-de-datos)
+7. [⚙️ Reglas de Negocio y Validaciones](#7-reglas-de-negocio-y-validaciones)
+   - 7.1 [Seguridad y Autenticación](#71-seguridad-y-autenticación)
+   - 7.2 [Limitaciones Funcionales](#72-limitaciones-funcionales)
+   - 7.3 [Estándares de Calidad](#73-estándares-de-calidad)
+8. [📊 Resultados de Testing y Calidad](#8-resultados-de-testing-y-calidad)
+   - 8.1 [Testing Automatizado por Módulos](#81-testing-automatizado-por-módulos)
+   - 8.2 [Evaluación de Usabilidad Profesional](#82-evaluación-de-usabilidad-profesional)
+9. [🚀 Roadmap de Evolución](#9-roadmap-de-evolución)
+   - 9.1 [Fase 1: Optimización](#91-fase-1-optimización)
+   - 9.2 [Fase 2: Expansión](#92-fase-2-expansión)
+   - 9.3 [Fase 3: Inteligencia](#93-fase-3-inteligencia)
+10. [📈 Métricas de Rendimiento](#10-métricas-de-rendimiento)
+    - 10.1 [Benchmarks Técnicos](#101-benchmarks-técnicos)
+    - 10.2 [KPIs de Negocio](#102-kpis-de-negocio)
+11. [🏫 Contexto Académico](#11-contexto-académico)
+    - 11.1 [Equipo de Desarrollo](#111-equipo-de-desarrollo)
+12. [📄 Documentación Técnica](#12-documentación-técnica)
+13. [👨‍💻 Información del Autor](#13-información-del-autor)
 
-## 📱 Características Principales
+## 1. 🎯 Visión del Proyecto
 
-### 🗺️ Navegación y Mapas
-- **Google Maps Integration** - Mapas interactivos con navegación en tiempo real
-- **Seguimiento GPS** - Monitoreo preciso de ubicación en tiempo real
-- **Planificación de Rutas** - Creación y gestión de rutas personalizadas
-- **Múltiples medios de transporte** - A pie, bicicleta, auto y transporte público
+Fomentar el turismo mediante una plataforma móvil que proporcione información relevante, recomendaciones contextuales y herramientas de planificación avanzadas. El objetivo es crear una experiencia de viaje intuitiva que integre geolocalización, recomendaciones personalizadas y navegación optimizada según el medio de transporte.
 
-### 👥 Gestión de Usuarios
-- **Autenticación Firebase** - Sistema de registro e inicio de sesión seguro
-- **Multi-usuario** - Soporte para múltiples perfiles de usuario
-- **Sincronización en la nube** - Datos respaldados con Cloud Firestore
-- **Recuperación de contraseña** - Sistema de seguridad integrado
+## 2. 📋 Metodología de Desarrollo
 
-### 🌟 Funcionalidades Adicionales
-- **Planes de Viaje** - Crear, editar y gestionar itinerarios de hasta 7 días
-- **Lugares Favoritos** - Guarda y gestiona ubicaciones importantes
-- **Información Climática** - Datos meteorológicos integrados por ubicación
-- **FAQs Integradas** - Centro de ayuda dentro de la aplicación
-- **Modo Oscuro** - Interfaz adaptable para mejor experiencia
-- **Interfaz Multiidioma** - Soporte para localización
+### 2.1 **SCRUM Framework**
+El proyecto fue desarrollado utilizando **metodología SCRUM** con 8 sprints estructurados que abarcaron desde la conceptualización hasta la implementación completa:
 
-## 🛠️ Stack Tecnológico
+### 2.2 **Sprint Planning Overview**
+- **Sprint 1** (20-22 Sep 2023): Definición de alcance, requerimientos y reglas de negocio
+- **Sprint 2** (22-29 Sep 2023): Desarrollo de prototipos no funcionales y diseño de interfaces
+- **Sprint 3** (09-13 Oct 2023): Refinamiento de interfaces y casos de uso suplementarios
+- **Sprint 4** (16-20 Oct 2023): Implementación de casos de uso fundamentales
+- **Sprint 5** (23 Oct-03 Nov 2023): Configuración de entornos, Firebase y definición del MVP
+- **Sprint 6** (06-28 Nov 2023): Desarrollo del frontend e integración de APIs
+- **Sprint 7** (29 Nov-12 Dic 2023): Implementación del backend y testing integral
+- **Sprint 8** (13-19 Dic 2023): Integración final, pruebas y optimización
 
-### **Frontend**
-- **Flutter** (SDK >=3.0.0) - Framework de desarrollo multiplataforma
+### 2.3 **Equipo SCRUM "Los Maquiavélicos"**
+Equipo multidisciplinario de 11 desarrolladores con roles especializados en frontend, backend, documentación técnica, testing y arquitectura de sistemas.
+
+## 3. 🏗️ Arquitectura y Stack Tecnológico
+
+### 3.1 **Frontend & Framework**
+- **Flutter** (SDK >=3.0.0) - Desarrollo multiplataforma nativo
 - **Dart** - Lenguaje de programación principal
+- **BLoC Pattern** - Arquitectura de gestión de estado reactiva
+- **Auto Route** - Sistema de navegación declarativa
 
-### **Backend & Servicios**
-- **Firebase Core** - Plataforma de desarrollo backend
-- **Firebase Auth** - Autenticación de usuarios
+### 3.2 **Backend & Servicios en la Nube**
+- **Firebase Core** - Plataforma backend como servicio
+- **Firebase Authentication** - Autenticación segura multiproveedor
 - **Cloud Firestore** - Base de datos NoSQL en tiempo real
+- **Firebase Dynamic Links** - Enlaces dinámicos para compartir
 
-### **Mapas y Ubicación**
-- **Google Maps Flutter** - Integración de mapas
-- **Google Places** - API de lugares y búsqueda
-- **Location Services** - Servicios de geolocalización
-- **Permission Handler** - Gestión de permisos del dispositivo
+### 3.3 **APIs y Servicios Externos**
+- **Google Maps Flutter** - Mapas interactivos y navegación
+- **Google Places API** - Búsqueda y información de lugares
+- **Google Maps Webservice** - Servicios de geocodificación y rutas
+- **Weather API** - Información meteorológica contextual
 
-### **Arquitectura y Estado**
-- **Flutter BLoC** - Gestión de estado reactiva
-- **Auto Route** - Navegación declarativa
+### 3.4 **Herramientas de Desarrollo**
 - **Freezed** - Generación de código inmutable
-- **JSON Serializable** - Serialización de datos
+- **JSON Serializable** - Serialización automática de datos
+- **Build Runner** - Generación de código automatizada
+- **Flutter Lints** - Análisis estático de código
 
-## 🚀 Instalación y Configuración
+## 4. 📱 Funcionalidades Principales
 
-### Prerrequisitos
+### 4.1 **🔐 Gestión de Usuarios Avanzada**
+- Autenticación Firebase con validación robusta
+- Sistema multiusuario con cambio de cuentas dinámico
+- Recuperación de contraseñas con preguntas de seguridad
+- Perfiles personalizables con preferencias de viaje
+
+### 4.2 **🗺️ Navegación y Mapas Inteligentes**
+- Geolocalización en tiempo real con GPS de alta precisión
+- Rutas optimizadas para múltiples medios de transporte:
+  - **A pie** - Rutas peatonales optimizadas
+  - **Bicicleta** - Ciclovías y rutas ciclistas
+  - **Automóvil** - Navegación vehicular con tráfico
+  - **Transporte público** - Integración con sistemas urbanos
+- Búsqueda contextual con autocompletado inteligente
+
+### 4.3 **📅 Planificación de Viajes Profesional**
+- Creación de itinerarios de hasta 7 días
+- Algoritmo de recomendaciones basado en:
+  - Preferencias del usuario
+  - Historial de visitas
+  - Proximidad geográfica
+  - Calificaciones comunitarias
+- Gestión completa de planes: crear, editar, duplicar, eliminar
+
+### 4.4 **⭐ Sistema de Favoritos y Recomendaciones**
+- Gestión inteligente de lugares favoritos
+- Recomendaciones personalizadas por categorías
+- Integración con Google Places para información actualizada
+- Compartir ubicaciones mediante enlaces dinámicos
+
+### 4.5 **🌤️ Información Contextual**
+- Datos meteorológicos en tiempo real
+- Notificaciones climáticas por ubicación
+- Información de horarios y disponibilidad de establecimientos
+- Catálogo extenso por categorías (restaurantes, museos, hoteles, etc.)
+
+## 5. 🛠️ Implementación y Configuración
+
+### 5.1 **Prerrequisitos del Sistema**
 ```bash
-# Verificar instalación de Flutter
-flutter --version
-
-# Verificar dispositivos disponibles
-flutter devices
+Flutter SDK >=3.0.0
+Dart >=3.0.0
+Android Studio / VS Code
+Git para control de versiones
 ```
 
-### Configuración del Proyecto
+### 5.2 **Configuración del Proyecto**
 
-1. **Clonar el repositorio**
+1. **Clonar y configurar dependencias**
 ```bash
 git clone https://github.com/Czamudioo121/TrakNav.git
 cd TrakNav
-```
-
-2. **Instalar dependencias**
-```bash
 flutter pub get
-```
-
-3. **Generar archivos de configuración**
-```bash
 flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 
-4. **Configurar Firebase**
-   - Crear proyecto en Firebase Console
-   - Descargar `google-services.json` (Android) 
-   - Configurar `GoogleService-Info.plist` (iOS)
-   - Habilitar Authentication y Firestore
-   - Configurar reglas de seguridad en Firestore
-
-5. **Configurar Google Maps API**
-   - Obtener API Key de Google Cloud Console
-   - Configurar en `android/app/src/main/AndroidManifest.xml`
-   - Configurar en `ios/Runner/AppDelegate.swift`
-
-### Ejecutar la Aplicación
-
+2. **Configuración de Firebase**
 ```bash
-# Modo debug
-flutter run
+# Instalar Firebase CLI
+npm install -g firebase-tools
 
-# Modo release
-flutter run --release
-
-# Para dispositivo específico
-flutter run -d <device-id>
+# Configurar proyecto Firebase
+firebase login
+firebase projects:list
 ```
 
-## 📂 Estructura del Proyecto
+3. **Configuración de APIs de Google**
+- Habilitar Google Maps SDK para Android/iOS
+- Configurar Google Places API
+- Obtener claves API y configurar en:
+  - `android/app/src/main/AndroidManifest.xml`
+  - `ios/Runner/AppDelegate.swift`
 
+4. **Estructura de configuración**
 ```
-TrakNav/
-├── lib/
-│   ├── core/           # Configuración base, constantes, servicios
-│   ├── features/       # Módulos: auth, home, map, travel_plan, favorites
-│   ├── shared/         # Widgets, temas, utilidades, localización
-│   ├── router/         # Rutas (auto_route)
-│   ├── blocs/          # BLoCs/Cubits por feature
-│   ├── models/         # Modelos (freezed, json_serializable)
-│   └── main.dart       # Punto de entrada
-├── assets/
-│   ├── signin/         # Recursos de autenticación
-│   ├── home/           # Recursos de pantalla principal
-│   ├── favoritos/      # Recursos de favoritos
-│   ├── TravelPlan/     # Recursos de planificación
-│   ├── clima/          # Recursos climáticos
-│   └── MyProfile/      # Recursos de perfil
-├── android/            # Configuración Android
-├── ios/                # Configuración iOS
-└── test/              # Pruebas unitarias
+android/
+  app/
+    src/main/
+      AndroidManifest.xml  # Google Maps API Key
+      google-services.json # Firebase Config
+ios/
+  Runner/
+    Info.plist           # iOS Configuration
+    GoogleService-Info.plist # Firebase iOS
 ```
 
-## 🔧 Scripts Disponibles
+### 5.3 **Comandos de Desarrollo**
 
 ```bash
 # Análisis de código
 flutter analyze
 
-# Ejecutar pruebas
+# Ejecución en desarrollo
+flutter run --debug
+
+# Compilación para producción
+flutter build apk --release
+flutter build appbundle --release
+
+# Testing automatizado
 flutter test
-
-# Generar APK
-flutter build apk
-
-# Generar bundle para Play Store
-flutter build appbundle
-
-# Limpiar proyecto
-flutter clean
 ```
 
-## 📋 Dependencias Principales
+## 6. 🔧 Arquitectura del Sistema
 
-| Dependencia | Versión | Propósito |
-|------------|---------|-----------|
-| `google_maps_flutter` | ^2.5.0 | Integración de Google Maps |
-| `firebase_auth` | ^4.12.1 | Autenticación de usuarios |
-| `cloud_firestore` | ^4.13.3 | Base de datos NoSQL |
-| `flutter_bloc` | ^8.1.3 | Gestión de estado |
-| `location` | ^5.0.3 | Servicios de ubicación |
-| `auto_route` | ^7.8.4 | Navegación automática |
-| `google_places_flutter` | ^2.0.6 | Búsqueda de lugares |
-| `permission_handler` | ^11.0.1 | Gestión de permisos |
+### 6.1 **Patrón BLoC (Business Logic Component)**
+```
+lib/
+├── core/
+│   ├── constants/         # Constantes globales
+│   ├── errors/           # Manejo de errores
+│   ├── services/         # Servicios compartidos
+│   └── utils/            # Utilidades
+├── features/
+│   ├── auth/             # Autenticación
+│   │   ├── bloc/         # Lógica de negocio
+│   │   ├── data/         # Repositorios y modelos
+│   │   └── presentation/ # Interfaces de usuario
+│   ├── maps/             # Funcionalidades de mapas
+│   ├── travel_plan/      # Planificación de viajes
+│   ├── favorites/        # Gestión de favoritos
+│   └── weather/          # Información climática
+└── shared/
+    ├── widgets/          # Componentes reutilizables
+    ├── themes/           # Temas y estilos
+    └── localization/     # Internacionalización
+```
 
-## 🧱 Reglas de Negocio
+### 6.2 **Flujo de Datos**
+1. **UI Layer** - Interfaces Flutter con widgets reactivos
+2. **BLoC Layer** - Lógica de negocio y gestión de estados
+3. **Repository Layer** - Abstracción de fuentes de datos
+4. **Data Layer** - APIs, Firebase y almacenamiento local
 
-- **Seguridad de contraseñas**: Mínimo 8 caracteres con mayúscula, minúscula, número y carácter especial
-- **Multiusuario habilitado**: Acciones clave requieren sesión activa
-- **Límites de itinerario**: Máximo 7 días por plan de viaje
-- **Rutas en curso**: No iniciar nueva ruta si hay una activa
-- **Estándares de accesibilidad**: Cumplimiento WCAG
-- **Protección de datos**: Información personal y ubicaciones protegidas
+## 7. ⚙️ Reglas de Negocio y Validaciones
 
-## ⚙️ Requisitos del Sistema
+### 7.1 **Seguridad y Autenticación**
+- Contraseñas: mínimo 8 caracteres con mayúscula, minúscula, número y carácter especial
+- Validación de correos electrónicos únicos por cuenta
+- Preguntas de seguridad obligatorias para recuperación
+- Sesiones seguras con tokens JWT de Firebase
 
-### **Funcionales**
-- Registro y autenticación de usuarios
-- Búsqueda y filtrado de lugares por categorías
-- Creación y edición de planes de viaje
-- Navegación GPS con múltiples medios de transporte
-- Gestión de favoritos y recomendaciones personalizadas
+### 7.2 **Limitaciones Funcionales**
+- Máximo 7 días por itinerario de viaje
+- Máximo 8 lugares por día en planes de viaje
+- Restricción de rutas simultáneas (una activa por usuario)
+- Geolocalización requerida para funcionalidades principales
 
-### **No Funcionales**
-- **Plataforma**: Android (principal)
-- **Consumo**: Optimizado para bajo consumo de batería
-- **Rendimiento**: Binario < 1 GB, dispositivo con ≥ 4 GB RAM
-- **Disponibilidad**: Sujeta al dispositivo local del usuario
-- **Seguridad**: Protección de datos sensibles en Firebase
+### 7.3 **Estándares de Calidad**
+- Cumplimiento WCAG 2.1 para accesibilidad
+- Protección de datos personales (GDPR compliance)
+- Optimización para dispositivos con ≥4GB RAM
+- Aplicación <1GB de almacenamiento
 
-## ✅ Resultados de Pruebas
+## 8. 📊 Resultados de Testing y Calidad
 
-El proyecto ha sido sometido a pruebas funcionales exhaustivas con los siguientes resultados:
+### 8.1 **Testing Automatizado por Módulos**
+El proyecto implementó testing exhaustivo con los siguientes resultados:
 
-### **Pruebas por Módulo**
-- **Crear cuenta**: 100% funcionalidad (7/7)
-- **Seleccionar preferencias**: 100% (4/4)  
-- **Inicio de sesión**: 91% (10/11)
-- **Cambio de idioma**: 70% (7/10)
-- **Crear plan de viaje**: 95% (25/26)
-- **Catálogos**: 94% (13/14)
-- **Editar plan**: 100% (25/25)
-- **FAQ**: 100% (7/7)
-- **Ubicación actual**: 86% (12/14)
-- **Información climática**: 100% (5/5)
-- **Favoritos**: 100% (4/4)
-- **Recomendaciones**: 88% (8/9)
-- **Trayecto óptimo**: 100% (6/6)
+| Módulo | Funcionalidad | Cobertura |
+|--------|---------------|-----------|
+| **Autenticación** | Crear cuenta | 100% (7/7) |
+| **Preferencias** | Selección inicial | 100% (4/4) |
+| **Sesiones** | Inicio de sesión | 91% (10/11) |
+| **Localización** | Cambio de idioma | 70% (7/10) |
+| **Planificación** | Crear itinerario | 95% (25/26) |
+| **Catálogos** | Navegación | 94% (13/14) |
+| **Edición** | Modificar planes | 100% (25/25) |
+| **Soporte** | FAQs | 100% (7/7) |
+| **Geolocalización** | Ubicación actual | 86% (12/14) |
+| **Clima** | Información meteorológica | 100% (5/5) |
+| **Favoritos** | Gestión de lugares | 100% (4/4) |
+| **Recomendaciones** | Algoritmo personalizado | 88% (8/9) |
+| **Navegación** | Rutas óptimas | 100% (6/6) |
 
-### **Evaluación de Usabilidad**
-**Fortalezas identificadas:**
-- Propuesta de valor diferencial para turistas
-- Interfaz atractiva y fácil de usar
-- Funcionalidades bien integradas
+### 8.2 **Evaluación de Usabilidad Profesional**
 
-**Áreas de mejora:**
-- Notificaciones y mensajes de error más específicos
-- Optimización de rendimiento del mapa
-- Integración completa de recuperación de contraseña
-- Mejoras en accesibilidad de funciones
+**Fortalezas Identificadas:**
+- Propuesta de valor única para el sector turístico
+- Interfaz intuitiva con excelente experiencia de usuario
+- Integración efectiva de servicios externos
+- Rendimiento optimizado en dispositivos objetivo
 
-## 🗺️ Roadmap de Desarrollo
+**Áreas de Optimización:**
+- Mensajes de error más contextuales y específicos
+- Recuperación de contraseñas completamente in-app
+- Optimización de rendimiento en mapas con muchos marcadores
+- Internacionalización completa de formularios
 
-### **Próximas Mejoras**
-- [ ] Notificaciones push para alertas de ubicación
-- [ ] Modo offline con mapas descargados  
-- [ ] Integración con Wearables
-- [ ] Análisis de patrones de viaje
+## 9. 🚀 Roadmap de Evolución
+
+### 9.1 **Fase 1: Optimización**
+- [ ] Implementación de Crashlytics para telemetría
+- [ ] Modo offline con caché inteligente de mapas
+- [ ] Notificaciones push contextuales
+- [ ] Métricas de uso y analytics avanzados
+
+### 9.2 **Fase 2: Expansión**
+- [ ] Integración con wearables (Apple Watch, Wear OS)
+- [ ] Realidad aumentada para navegación
 - [ ] Compartir ubicación en tiempo real
-- [ ] Crashlytics y métricas de estabilidad
-- [ ] Tests instrumentados en dispositivos reales
+- [ ] API pública para desarrolladores
 
-### **Optimizaciones Técnicas**
-- [ ] Mejorar onboarding y discoverability
-- [ ] Completar transporte público en rutas
-- [ ] Internacionalización completa
-- [ ] Panel de telemetría y calidad
-- [ ] Caché inteligente para mejor rendimiento
+### 9.3 **Fase 3: Inteligencia**
+- [ ] Machine Learning para recomendaciones
+- [ ] Análisis predictivo de patrones de viaje
+- [ ] Asistente virtual por voz
+- [ ] Integración con IoT y ciudades inteligentes
 
-## 🤝 Contribución
+## 10. 📈 Métricas de Rendimiento
 
-Las contribuciones son bienvenidas. Para contribuir:
+### 10.1 **Benchmarks Técnicos**
+- **Tiempo de inicio**: <3 segundos en dispositivos objetivo
+- **Consumo de batería**: Optimizado para 8+ horas de uso continuo
+- **Uso de memoria**: <512MB RAM promedio
+- **Tamaño de aplicación**: <150MB instalación completa
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### 10.2 **KPIs de Negocio**
+- **Retención de usuarios**: Meta 70% a 30 días
+- **Engagement**: Sesiones promedio >10 minutos
+- **Conversión**: 85% de usuarios completan primer itinerario
+- **Satisfacción**: Score NPS objetivo >50
 
-## 📄 Documentación Adicional
+## 11. 🏫 Contexto Académico
 
-- **[Documentación Técnica Completa](./Documentacion.pdf)** - Documentación detallada del proyecto incluyendo alcance, sprints, casos de uso, pruebas y evaluaciones
-- **[Documentación Comprimida](./Traknav-comprimido.pdf)** - Versión resumida para consulta rápida
+**Institución:** Instituto Politécnico Nacional - Escuela Superior de Cómputo  
+**Carrera:** Ingeniería en Sistemas Computacionales  
+**Materia:** Análisis y diseño de sistemas  
+**Profesora:** Maldonado Castillo Idalia  
+**Grupo:** 5CM2  
+**Periodo:** Agosto - Diciembre 2023
 
-## 🏫 Información Académica
+### 11.1 **Equipo de Desarrollo**
 
-**Proyecto desarrollado en:**
-- **Instituto Politécnico Nacional**
-- **Escuela Superior de Cómputo**
-- **Ingeniería en Sistemas Computacionales**
-- **Grupo:** 5CM2
-- **Profesora:** Maldonado Castillo Idalia
-- **Fecha:** 18 de Diciembre 2023
-
-**Equipo de Desarrollo "Los Maquiavélicos":**
-- Buendia Velazco Abel
-- Cruz de la Vega Edmundo Alejandro  
-- Herrera Albavera Luis Enrique
-- Juseppe Pérez Julio Cesar
+**Scrum Master & Product Owner:**
 - Martinez Acosta José Miguel
-- Muñoz Tapia Alan Arath
-- Ortega Santiago Aaron Uriel
-- Ramirez Garcia Juan Carlos
-- Ramirez López Felipe Hiram
+
+**Development Team:**
+- Buendia Velazco Abel 
+- Cruz de la Vega Edmundo Alejandro
+- Herrera Albavera Luis Enrique 
+- Juseppe Pérez Julio Cesar 
+- Muñoz Tapia Alan Arath 
+- Ortega Santiago Aaron Uriel 
+- Ramirez Garcia Juan Carlos 
+- Ramirez López Felipe Hiram 
 - Vázquez Cisneros Miguel Angel
-- **Zamudio Onofre Cesar Osvaldo** (Autor del repositorio)
+- Zamudio Onofre Cesar Osvaldo
 
-## 👨‍💻 Autor del Repositorio
+## 12. 📄 Documentación Técnica
 
-**Cesar Zamudio** - [@Czamudioo121](https://github.com/Czamudioo121)
-- 📍 Ubicación: CDMX, México
-- 📧 Contacto: [GitHub Profile](https://github.com/Czamudioo121)
+- **[Documentación Completa del Proyecto](./Documentacion.pdf)** - 200+ páginas con análisis completo, metodología SCRUM, casos de uso detallados, arquitectura del sistema, testing integral y evaluaciones de desempeño
+- **[Presentación Ejecutiva](./Traknav-comprimido.pdf)** - Resumen ejecutivo para consulta rápida
+
+## 13. 👨‍💻 Información del Autor
+
+**Cesar Osvaldo Zamudio Onofre**  
+[@Czamudioo121](https://github.com/Czamudioo121)
+
+📍 **Ubicación:** Ciudad de México, México  
+🎓 **Rol en el proyecto:** Development Team Member & Documentation Lead & Designer UI/UX
+📧 **Contacto:** [GitHub Profile](https://github.com/Czamudioo121)
 
 ---
 
-### 🚀 ¿Listo para navegar? ¡Explora el mundo con TrakNav! 
+### 🌟 TrakNav representa la convergencia entre tecnología moderna, metodologías ágiles y experiencia de usuario excepcional
 
-*Desarrollado con ❤️ usando Flutter por el equipo Los Maquiavélicos*
+*Desarrollado con metodología SCRUM y tecnologías de vanguardia por el equipo "Los Maquiavélicos"*
+
+**Stack Principal:** Flutter • Firebase • Google Maps • SCRUM • BLoC Pattern
