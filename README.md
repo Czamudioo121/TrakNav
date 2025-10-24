@@ -4,58 +4,60 @@
 
 ## 📑 Tabla de Contenidos
 
-1. [🎯 Visión del Proyecto](#1-visión-del-proyecto)
-2. [📋 Metodología de Desarrollo](#2-metodología-de-desarrollo)
-   - 2.1 [SCRUM Framework](#21-scrum-framework)
-   - 2.2 [Sprint Planning Overview](#22-sprint-planning-overview)
-   - 2.3 [Equipo SCRUM "Los Maquiavélicos"](#23-equipo-scrum-los-maquiavélicos)
-3. [🏗️ Arquitectura y Stack Tecnológico](#3-arquitectura-y-stack-tecnológico)
-   - 3.1 [Frontend & Framework](#31-frontend--framework)
-   - 3.2 [Backend & Servicios en la Nube](#32-backend--servicios-en-la-nube)
-   - 3.3 [APIs y Servicios Externos](#33-apis-y-servicios-externos)
-   - 3.4 [Herramientas de Desarrollo](#34-herramientas-de-desarrollo)
-4. [📱 Funcionalidades Principales](#4-funcionalidades-principales)
-   - 4.1 [🔐 Gestión de Usuarios Avanzada](#41-gestión-de-usuarios-avanzada)
-   - 4.2 [🗺️ Navegación y Mapas Inteligentes](#42-navegación-y-mapas-inteligentes)
-   - 4.3 [📅 Planificación de Viajes Profesional](#43-planificación-de-viajes-profesional)
-   - 4.4 [⭐ Sistema de Favoritos y Recomendaciones](#44-sistema-de-favoritos-y-recomendaciones)
-   - 4.5 [🌤️ Información Contextual](#45-información-contextual)
-5. [🛠️ Implementación y Configuración](#5-implementación-y-configuración)
-   - 5.1 [Prerrequisitos del Sistema](#51-prerrequisitos-del-sistema)
-   - 5.2 [Configuración del Proyecto](#52-configuración-del-proyecto)
-   - 5.3 [Comandos de Desarrollo](#53-comandos-de-desarrollo)
-6. [🔧 Arquitectura del Sistema](#6-arquitectura-del-sistema)
-   - 6.1 [Patrón BLoC (Business Logic Component)](#61-patrón-bloc-business-logic-component)
-   - 6.2 [Flujo de Datos](#62-flujo-de-datos)
-7. [⚙️ Reglas de Negocio y Validaciones](#7-reglas-de-negocio-y-validaciones)
-   - 7.1 [Seguridad y Autenticación](#71-seguridad-y-autenticación)
-   - 7.2 [Limitaciones Funcionales](#72-limitaciones-funcionales)
-   - 7.3 [Estándares de Calidad](#73-estándares-de-calidad)
-8. [📊 Resultados de Testing y Calidad](#8-resultados-de-testing-y-calidad)
-   - 8.1 [Testing Automatizado por Módulos](#81-testing-automatizado-por-módulos)
-   - 8.2 [Evaluación de Usabilidad Profesional](#82-evaluación-de-usabilidad-profesional)
-9. [🚀 Roadmap de Evolución](#9-roadmap-de-evolución)
-   - 9.1 [Fase 1: Optimización](#91-fase-1-optimización)
-   - 9.2 [Fase 2: Expansión](#92-fase-2-expansión)
-   - 9.3 [Fase 3: Inteligencia](#93-fase-3-inteligencia)
-10. [📈 Métricas de Rendimiento](#10-métricas-de-rendimiento)
-    - 10.1 [Benchmarks Técnicos](#101-benchmarks-técnicos)
-    - 10.2 [KPIs de Negocio](#102-kpis-de-negocio)
-11. [🏫 Contexto Académico](#11-contexto-académico)
-    - 11.1 [Equipo de Desarrollo](#111-equipo-de-desarrollo)
-12. [📄 Documentación Técnica](#12-documentación-técnica)
-13. [👨‍💻 Información del Autor](#13-información-del-autor)
+1. [🎯 Visión del Proyecto](#vision-del-proyecto)
+2. [📋 Metodología de Desarrollo](#metodologia-de-desarrollo)
+   - 2.1 [SCRUM Framework](#scrum-framework)
+   - 2.2 [Sprint Planning Overview](#sprint-planning-overview)
+   - 2.3 [Equipo SCRUM "Los Maquiavélicos"](#equipo-scrum-los-maquiavelicos)
+3. [🏗️ Arquitectura y Stack Tecnológico](#arquitectura-y-stack-tecnologico)
+   - 3.1 [Frontend & Framework](#frontend-framework)
+   - 3.2 [Backend & Servicios en la Nube](#backend-servicios-en-la-nube)
+   - 3.3 [APIs y Servicios Externos](#apis-y-servicios-externos)
+   - 3.4 [Herramientas de Desarrollo](#herramientas-de-desarrollo)
+4. [📱 Funcionalidades Principales](#funcionalidades-principales)
+   - 4.1 [🔐 Gestión de Usuarios Avanzada](#gestion-de-usuarios-avanzada)
+   - 4.2 [🗺️ Navegación y Mapas Inteligentes](#navegacion-y-mapas-inteligentes)
+   - 4.3 [📅 Planificación de Viajes Profesional](#planificacion-de-viajes-profesional)
+   - 4.4 [⭐ Sistema de Favoritos y Recomendaciones](#sistema-de-favoritos-y-recomendaciones)
+   - 4.5 [🌤️ Información Contextual](#informacion-contextual)
+5. [🛠️ Implementación y Configuración](#implementacion-y-configuracion)
+   - 5.1 [Prerrequisitos del Sistema](#prerrequisitos-del-sistema)
+   - 5.2 [Configuración del Proyecto](#configuracion-del-proyecto)
+   - 5.3 [Comandos de Desarrollo](#comandos-de-desarrollo)
+6. [🔧 Arquitectura del Sistema](#arquitectura-del-sistema)
+   - 6.1 [Patrón BLoC (Business Logic Component)](#patron-bloc-business-logic-component)
+   - 6.2 [Flujo de Datos](#flujo-de-datos)
+7. [⚙️ Reglas de Negocio y Validaciones](#reglas-de-negocio-y-validaciones)
+   - 7.1 [Seguridad y Autenticación](#seguridad-y-autenticacion)
+   - 7.2 [Limitaciones Funcionales](#limitaciones-funcionales)
+   - 7.3 [Estándares de Calidad](#estandares-de-calidad)
+8. [📊 Resultados de Testing y Calidad](#resultados-de-testing-y-calidad)
+   - 8.1 [Testing Automatizado por Módulos](#testing-automatizado-por-modulos)
+   - 8.2 [Evaluación de Usabilidad Profesional](#evaluacion-de-usabilidad-profesional)
+9. [🚀 Roadmap de Evolución](#roadmap-de-evolucion)
+   - 9.1 [Fase 1: Optimización](#fase-1-optimizacion)
+   - 9.2 [Fase 2: Expansión](#fase-2-expansion)
+   - 9.3 [Fase 3: Inteligencia](#fase-3-inteligencia)
+10. [📈 Métricas de Rendimiento](#metricas-de-rendimiento)
+    - 10.1 [Benchmarks Técnicos](#benchmarks-tecnicos)
+    - 10.2 [KPIs de Negocio](#kpis-de-negocio)
+11. [🏫 Contexto Académico](#contexto-academico)
+    - 11.1 [Equipo de Desarrollo](#equipo-de-desarrollo)
+12. [📄 Documentación Técnica](#documentacion-tecnica)
+13. [👨‍💻 Información del Autor](#informacion-del-autor)
 
-## 1. 🎯 Visión del Proyecto
+<h2 id="vision-del-proyecto">1. 🎯 Visión del Proyecto</h2>
 
 Fomentar el turismo mediante una plataforma móvil que proporcione información relevante, recomendaciones contextuales y herramientas de planificación avanzadas. El objetivo es crear una experiencia de viaje intuitiva que integre geolocalización, recomendaciones personalizadas y navegación optimizada según el medio de transporte.
 
-## 2. 📋 Metodología de Desarrollo
+<h2 id="metodologia-de-desarrollo">2. 📋 Metodología de Desarrollo</h2>
 
-### 2.1 **SCRUM Framework**
-El proyecto fue desarrollado utilizando **metodología SCRUM** con 8 sprints estructurados que abarcaron desde la conceptualización hasta la implementación completa:
+<h3 id="scrum-framework">2.1 SCRUM Framework</h3>
 
-### 2.2 **Sprint Planning Overview**
+El proyecto fue desarrollado utilizando **metodología SCRUM** con 8 sprints estructurados que abarcaron desde la conceptualización hasta la implementación completa.
+
+<h3 id="sprint-planning-overview">2.2 Sprint Planning Overview</h3>
+
 - **Sprint 1** (20-22 Sep 2023): Definición de alcance, requerimientos y reglas de negocio
 - **Sprint 2** (22-29 Sep 2023): Desarrollo de prototipos no funcionales y diseño de interfaces
 - **Sprint 3** (09-13 Oct 2023): Refinamiento de interfaces y casos de uso suplementarios
@@ -65,44 +67,51 @@ El proyecto fue desarrollado utilizando **metodología SCRUM** con 8 sprints est
 - **Sprint 7** (29 Nov-12 Dic 2023): Implementación del backend y testing integral
 - **Sprint 8** (13-19 Dic 2023): Integración final, pruebas y optimización
 
-### 2.3 **Equipo SCRUM "Los Maquiavélicos"**
+<h3 id="equipo-scrum-los-maquiavelicos">2.3 Equipo SCRUM "Los Maquiavélicos"</h3>
+
 Equipo multidisciplinario de 11 desarrolladores con roles especializados en frontend, backend, documentación técnica, testing y arquitectura de sistemas.
 
-## 3. 🏗️ Arquitectura y Stack Tecnológico
+<h2 id="arquitectura-y-stack-tecnologico">3. 🏗️ Arquitectura y Stack Tecnológico</h2>
 
-### 3.1 **Frontend & Framework**
+<h3 id="frontend-framework">3.1 Frontend & Framework</h3>
+
 - **Flutter** (SDK >=3.0.0) - Desarrollo multiplataforma nativo
 - **Dart** - Lenguaje de programación principal
 - **BLoC Pattern** - Arquitectura de gestión de estado reactiva
 - **Auto Route** - Sistema de navegación declarativa
 
-### 3.2 **Backend & Servicios en la Nube**
+<h3 id="backend-servicios-en-la-nube">3.2 Backend & Servicios en la Nube</h3>
+
 - **Firebase Core** - Plataforma backend como servicio
 - **Firebase Authentication** - Autenticación segura multiproveedor
 - **Cloud Firestore** - Base de datos NoSQL en tiempo real
 - **Firebase Dynamic Links** - Enlaces dinámicos para compartir
 
-### 3.3 **APIs y Servicios Externos**
+<h3 id="apis-y-servicios-externos">3.3 APIs y Servicios Externos</h3>
+
 - **Google Maps Flutter** - Mapas interactivos y navegación
 - **Google Places API** - Búsqueda y información de lugares
 - **Google Maps Webservice** - Servicios de geocodificación y rutas
 - **Weather API** - Información meteorológica contextual
 
-### 3.4 **Herramientas de Desarrollo**
+<h3 id="herramientas-de-desarrollo">3.4 Herramientas de Desarrollo</h3>
+
 - **Freezed** - Generación de código inmutable
 - **JSON Serializable** - Serialización automática de datos
 - **Build Runner** - Generación de código automatizada
 - **Flutter Lints** - Análisis estático de código
 
-## 4. 📱 Funcionalidades Principales
+<h2 id="funcionalidades-principales">4. 📱 Funcionalidades Principales</h2>
 
-### 4.1 **🔐 Gestión de Usuarios Avanzada**
+<h3 id="gestion-de-usuarios-avanzada">4.1 🔐 Gestión de Usuarios Avanzada</h3>
+
 - Autenticación Firebase con validación robusta
 - Sistema multiusuario con cambio de cuentas dinámico
 - Recuperación de contraseñas con preguntas de seguridad
 - Perfiles personalizables con preferencias de viaje
 
-### 4.2 **🗺️ Navegación y Mapas Inteligentes**
+<h3 id="navegacion-y-mapas-inteligentes">4.2 🗺️ Navegación y Mapas Inteligentes</h3>
+
 - Geolocalización en tiempo real con GPS de alta precisión
 - Rutas optimizadas para múltiples medios de transporte:
   - **A pie** - Rutas peatonales optimizadas
@@ -111,7 +120,8 @@ Equipo multidisciplinario de 11 desarrolladores con roles especializados en fron
   - **Transporte público** - Integración con sistemas urbanos
 - Búsqueda contextual con autocompletado inteligente
 
-### 4.3 **📅 Planificación de Viajes Profesional**
+<h3 id="planificacion-de-viajes-profesional">4.3 📅 Planificación de Viajes Profesional</h3>
+
 - Creación de itinerarios de hasta 7 días
 - Algoritmo de recomendaciones basado en:
   - Preferencias del usuario
@@ -120,21 +130,24 @@ Equipo multidisciplinario de 11 desarrolladores con roles especializados en fron
   - Calificaciones comunitarias
 - Gestión completa de planes: crear, editar, duplicar, eliminar
 
-### 4.4 **⭐ Sistema de Favoritos y Recomendaciones**
+<h3 id="sistema-de-favoritos-y-recomendaciones">4.4 ⭐ Sistema de Favoritos y Recomendaciones</h3>
+
 - Gestión inteligente de lugares favoritos
 - Recomendaciones personalizadas por categorías
 - Integración con Google Places para información actualizada
 - Compartir ubicaciones mediante enlaces dinámicos
 
-### 4.5 **🌤️ Información Contextual**
+<h3 id="informacion-contextual">4.5 🌤️ Información Contextual</h3>
+
 - Datos meteorológicos en tiempo real
 - Notificaciones climáticas por ubicación
 - Información de horarios y disponibilidad de establecimientos
 - Catálogo extenso por categorías (restaurantes, museos, hoteles, etc.)
 
-## 5. 🛠️ Implementación y Configuración
+<h2 id="implementacion-y-configuracion">5. 🛠️ Implementación y Configuración</h2>
 
-### 5.1 **Prerrequisitos del Sistema**
+<h3 id="prerrequisitos-del-sistema">5.1 Prerrequisitos del Sistema</h3>
+
 ```bash
 Flutter SDK >=3.0.0
 Dart >=3.0.0
@@ -142,7 +155,7 @@ Android Studio / VS Code
 Git para control de versiones
 ```
 
-### 5.2 **Configuración del Proyecto**
+<h3 id="configuracion-del-proyecto">5.2 Configuración del Proyecto</h3>
 
 1. **Clonar y configurar dependencias**
 ```bash
@@ -182,7 +195,7 @@ ios/
     GoogleService-Info.plist # Firebase iOS
 ```
 
-### 5.3 **Comandos de Desarrollo**
+<h3 id="comandos-de-desarrollo">5.3 Comandos de Desarrollo</h3>
 
 ```bash
 # Análisis de código
@@ -199,9 +212,10 @@ flutter build appbundle --release
 flutter test
 ```
 
-## 6. 🔧 Arquitectura del Sistema
+<h2 id="arquitectura-del-sistema">6. 🔧 Arquitectura del Sistema</h2>
 
-### 6.1 **Patrón BLoC (Business Logic Component)**
+<h3 id="patron-bloc-business-logic-component">6.1 Patrón BLoC (Business Logic Component)</h3>
+
 ```
 lib/
 ├── core/
@@ -224,35 +238,40 @@ lib/
     └── localization/     # Internacionalización
 ```
 
-### 6.2 **Flujo de Datos**
+<h3 id="flujo-de-datos">6.2 Flujo de Datos</h3>
+
 1. **UI Layer** - Interfaces Flutter con widgets reactivos
 2. **BLoC Layer** - Lógica de negocio y gestión de estados
 3. **Repository Layer** - Abstracción de fuentes de datos
 4. **Data Layer** - APIs, Firebase y almacenamiento local
 
-## 7. ⚙️ Reglas de Negocio y Validaciones
+<h2 id="reglas-de-negocio-y-validaciones">7. ⚙️ Reglas de Negocio y Validaciones</h2>
 
-### 7.1 **Seguridad y Autenticación**
+<h3 id="seguridad-y-autenticacion">7.1 Seguridad y Autenticación</h3>
+
 - Contraseñas: mínimo 8 caracteres con mayúscula, minúscula, número y carácter especial
 - Validación de correos electrónicos únicos por cuenta
 - Preguntas de seguridad obligatorias para recuperación
 - Sesiones seguras con tokens JWT de Firebase
 
-### 7.2 **Limitaciones Funcionales**
+<h3 id="limitaciones-funcionales">7.2 Limitaciones Funcionales</h3>
+
 - Máximo 7 días por itinerario de viaje
 - Máximo 8 lugares por día en planes de viaje
 - Restricción de rutas simultáneas (una activa por usuario)
 - Geolocalización requerida para funcionalidades principales
 
-### 7.3 **Estándares de Calidad**
+<h3 id="estandares-de-calidad">7.3 Estándares de Calidad</h3>
+
 - Cumplimiento WCAG 2.1 para accesibilidad
 - Protección de datos personales (GDPR compliance)
 - Optimización para dispositivos con ≥4GB RAM
 - Aplicación <1GB de almacenamiento
 
-## 8. 📊 Resultados de Testing y Calidad
+<h2 id="resultados-de-testing-y-calidad">8. 📊 Resultados de Testing y Calidad</h2>
 
-### 8.1 **Testing Automatizado por Módulos**
+<h3 id="testing-automatizado-por-modulos">8.1 Testing Automatizado por Módulos</h3>
+
 El proyecto implementó testing exhaustivo con los siguientes resultados:
 
 | Módulo | Funcionalidad | Cobertura |
@@ -271,7 +290,7 @@ El proyecto implementó testing exhaustivo con los siguientes resultados:
 | **Recomendaciones** | Algoritmo personalizado | 88% (8/9) |
 | **Navegación** | Rutas óptimas | 100% (6/6) |
 
-### 8.2 **Evaluación de Usabilidad Profesional**
+<h3 id="evaluacion-de-usabilidad-profesional">8.2 Evaluación de Usabilidad Profesional</h3>
 
 **Fortalezas Identificadas:**
 - Propuesta de valor única para el sector turístico
@@ -285,41 +304,46 @@ El proyecto implementó testing exhaustivo con los siguientes resultados:
 - Optimización de rendimiento en mapas con muchos marcadores
 - Internacionalización completa de formularios
 
-## 9. 🚀 Roadmap de Evolución
+<h2 id="roadmap-de-evolucion">9. 🚀 Roadmap de Evolución</h2>
 
-### 9.1 **Fase 1: Optimización**
+<h3 id="fase-1-optimizacion">9.1 Fase 1: Optimización</h3>
+
 - [ ] Implementación de Crashlytics para telemetría
 - [ ] Modo offline con caché inteligente de mapas
 - [ ] Notificaciones push contextuales
 - [ ] Métricas de uso y analytics avanzados
 
-### 9.2 **Fase 2: Expansión**
+<h3 id="fase-2-expansion">9.2 Fase 2: Expansión</h3>
+
 - [ ] Integración con wearables (Apple Watch, Wear OS)
 - [ ] Realidad aumentada para navegación
 - [ ] Compartir ubicación en tiempo real
 - [ ] API pública para desarrolladores
 
-### 9.3 **Fase 3: Inteligencia**
+<h3 id="fase-3-inteligencia">9.3 Fase 3: Inteligencia</h3>
+
 - [ ] Machine Learning para recomendaciones
 - [ ] Análisis predictivo de patrones de viaje
 - [ ] Asistente virtual por voz
 - [ ] Integración con IoT y ciudades inteligentes
 
-## 10. 📈 Métricas de Rendimiento
+<h2 id="metricas-de-rendimiento">10. 📈 Métricas de Rendimiento</h2>
 
-### 10.1 **Benchmarks Técnicos**
+<h3 id="benchmarks-tecnicos">10.1 Benchmarks Técnicos</h3>
+
 - **Tiempo de inicio**: <3 segundos en dispositivos objetivo
 - **Consumo de batería**: Optimizado para 8+ horas de uso continuo
 - **Uso de memoria**: <512MB RAM promedio
 - **Tamaño de aplicación**: <150MB instalación completa
 
-### 10.2 **KPIs de Negocio**
+<h3 id="kpis-de-negocio">10.2 KPIs de Negocio</h3>
+
 - **Retención de usuarios**: Meta 70% a 30 días
 - **Engagement**: Sesiones promedio >10 minutos
 - **Conversión**: 85% de usuarios completan primer itinerario
 - **Satisfacción**: Score NPS objetivo >50
 
-## 11. 🏫 Contexto Académico
+<h2 id="contexto-academico">11. 🏫 Contexto Académico</h2>
 
 **Institución:** Instituto Politécnico Nacional - Escuela Superior de Cómputo  
 **Carrera:** Ingeniería en Sistemas Computacionales  
@@ -328,7 +352,7 @@ El proyecto implementó testing exhaustivo con los siguientes resultados:
 **Grupo:** 5CM2  
 **Periodo:** Agosto - Diciembre 2023
 
-### 11.1 **Equipo de Desarrollo**
+<h3 id="equipo-de-desarrollo">11.1 Equipo de Desarrollo</h3>
 
 **Scrum Master & Product Owner:**
 - Martinez Acosta José Miguel
@@ -345,18 +369,18 @@ El proyecto implementó testing exhaustivo con los siguientes resultados:
 - Vázquez Cisneros Miguel Angel
 - Zamudio Onofre Cesar Osvaldo
 
-## 12. 📄 Documentación Técnica
+<h2 id="documentacion-tecnica">12. 📄 Documentación Técnica</h2>
 
 - **[Documentación Completa del Proyecto](./Documentacion.pdf)** - 200+ páginas con análisis completo, metodología SCRUM, casos de uso detallados, arquitectura del sistema, testing integral y evaluaciones de desempeño
 - **[Presentación Ejecutiva](./Traknav-comprimido.pdf)** - Resumen ejecutivo para consulta rápida
 
-## 13. 👨‍💻 Información del Autor
+<h2 id="informacion-del-autor">13. 👨‍💻 Información del Autor</h2>
 
 **Cesar Osvaldo Zamudio Onofre**  
 [@Czamudioo121](https://github.com/Czamudioo121)
 
 📍 **Ubicación:** Ciudad de México, México  
-🎓 **Rol en el proyecto:** Development Team Member & Documentation Lead & Designer UI/UX
+🎓 **Rol en el proyecto:** Development Team Member & Documentation Lead & Designer UI/UX  
 📧 **Contacto:** [GitHub Profile](https://github.com/Czamudioo121)
 
 ---
